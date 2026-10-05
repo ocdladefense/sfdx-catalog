@@ -1,0 +1,33 @@
+{
+  "name": "MyPackage",
+  "namespace": "",
+  "packageDirectories": [
+    {
+      "path": "sfdx-source/Modules/default",
+      "package": "My Package",
+      "versionName": "Fall '24",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": "A concise description of my package.",
+      "dependencies": [
+        {
+            "package": "Json"
+        },
+        {
+            "package": "Http"
+        }
+      ]
+    },
+    {
+        "path": "sfdx-source/unpackaged",
+        "default": false
+    },
+    {
+        "path": "sfdx-source/sfdx",
+        "default": true
+    }
+  ],
+  "sfdcLoginUrl": "https://test.salesforce.com",
+  "sourceApiVersion": "62.0",
+  "packageAliases": {}
+}
