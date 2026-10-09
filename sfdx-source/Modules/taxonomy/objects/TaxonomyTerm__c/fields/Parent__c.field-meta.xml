@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>The parent Term (if any) for this child Term.  Terms without parents are considered top-level Terms.</description>
+    <inlineHelpText>Select the parent Term (if any) for this child Term.  Terms without parents are considered top-level Terms.</inlineHelpText>
+    <label>Parent</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>TaxonomyTerm__c.Vocabulary__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Vocabulary__c</valueField>
+        </filterItems>
+        <infoMessage>The filter for this window has been customized.  You can disable or modify this filter in Setup.</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>TaxonomyTerm__c</referenceTo>
+    <relationshipLabel>Child Terms</relationshipLabel>
+    <relationshipName>ParentTerm</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsFeatured__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates an entry should be regarded as featured in a specified target context.</description>
+    <inlineHelpText>Check to indicate an entry should be regarded as featured in a specified target context.</inlineHelpText>
+    <label>Is Featured</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

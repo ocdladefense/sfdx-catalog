@@ -1,33 +1,39 @@
 {
-  "name": "MyPackage",
+  "name": "Taxonomy and OCDLA Catalogs",
   "namespace": "",
   "packageDirectories": [
     {
-      "path": "sfdx-source/Modules/default",
-      "package": "My Package",
-      "versionName": "Fall '24",
+      "path": "sfdx-source/Modules/taxonomy",
+      "package": "Taxonomy",
+      "versionName": "Fall '26",
+      "versionNumber": "0.2.0.NEXT",
+      "default": false,
+      "versionDescription": ""
+    },
+    {
+      "path": "sfdx-source/Modules/ocdla-catalog",
+      "package": "OCDLA Catalog",
+      "versionName": "Fall '26",
       "versionNumber": "0.1.0.NEXT",
       "default": false,
-      "versionDescription": "A concise description of my package.",
-      "dependencies": [
-        {
-            "package": "Json"
-        },
-        {
-            "package": "Http"
-        }
-      ]
+      "versionDescription": ""
     },
     {
-        "path": "sfdx-source/unpackaged",
-        "default": false
+      "path": "sfdx-source/unpackaged",
+      "default": false
     },
     {
-        "path": "sfdx-source/sfdx",
-        "default": true
+      "path": "sfdx-source/sfdx",
+      "default": true
     }
   ],
   "sfdcLoginUrl": "https://test.salesforce.com",
-  "sourceApiVersion": "62.0",
-  "packageAliases": {}
+  "sourceApiVersion": "66.0",
+  "packageAliases": {
+    "Taxonomy": "0HoVJ00000000T30AI",
+    "OCDLA Catalog": "0HoVJ00000000Uf0AI",
+    "Taxonomy@0.1.0-1": "04tVJ000000QsSzYAK",
+    "Taxonomy@0.2.0-1": "04tVJ000000QwLJYA0",
+    "OCDLA Catalog@0.1.0-1": "04tVJ000000Qya1YAC"
+  }
 }

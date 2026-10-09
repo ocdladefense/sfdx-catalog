@@ -1,0 +1,73 @@
+<apex:page controller="OcdlaCatalogController" showHeader="false" standardStylesheets="false" docType="html-5.0" cache="false" applyHtmlTag="false" applyBodyTag="false">
+    
+	<apex:composition template="{!template}">
+        
+        <apex:define name="title">
+            <title>OCDLA Catalog - {!catalogName}</title> 
+        </apex:define>
+        
+        <apex:define name="styles">
+            
+            <link rel="stylesheet" href="https://{!cdn}/sites/all/modules/cart/css/catalog.css?{!cacheKey}" />
+   
+        </apex:define>
+        
+        <apex:define name="head-scripts">
+            
+            <script type="text/javascript">
+            
+            </script>
+            
+        </apex:define>
+        
+        <apex:define name="body">
+            
+            <c:ClickpdxShoppingCart />
+            
+            <div class="row two-columns">
+                
+                <div class="column column-first">
+                    <div class="content">
+                        
+                        <div class="catalog-menu">
+                            <!--- <c:StoreSearch host="{!cdn}" path="sites/default/modules/search/assets" />  --->
+                            <apex:outputText escape="false" value="{!menu}" />                        
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="eventList" class="main column catalog-list">
+                    <div class="content" id="product-results">
+                        
+                        
+                        <apex:pageMessages showDetail="True" id="myPageMessages"></apex:pageMessages>
+                        <h1>
+                            {!catalogName}
+                        </h1>
+                         
+                        <apex:repeat rendered="{!hasEntries}" value="{!entries}" var="entry">
+                            
+                            <div class="catalog-item">
+                                <h2 class="product-title">
+                                    <a href="/OcdlaProduct?id={!entry.relatedProductId}">{!entry.displayName}</a>
+                                </h2>
+                                <div class="product-price">${!entry.price}</div>
+                            </div>
+                            
+                        </apex:repeat>
+                        
+                          
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </apex:define>
+        
+        <apex:define name="javascripts"></apex:define>
+        
+    </apex:composition>
+    
+    
+</apex:page>
